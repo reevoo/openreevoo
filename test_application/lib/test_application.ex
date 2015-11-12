@@ -1,0 +1,2 @@
+defmodule TestApplication do
+end
