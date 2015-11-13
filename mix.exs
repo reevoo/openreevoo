@@ -28,6 +28,9 @@ defmodule Openreevoo.Mixfile do
   #
   # Type `mix help deps` for more examples and options
   defp deps do
-    []
+    [
+      # Automatic test runner
+      {:mix_test_watch, only: :dev},
+    ]
   end
 end
