@@ -3,7 +3,7 @@ defmodule Openreevoo do
   Elixir client for writing reviews of elixir libraries.
   """
 
-  def main(args) do
+  def main(_args) do
     IO.puts "hello world"
   end
 end
