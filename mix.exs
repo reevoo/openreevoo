@@ -31,6 +31,8 @@ defmodule Openreevoo.Mixfile do
     [
       # Automatic test runner
       {:mix_test_watch, only: :dev},
+      # Code style linter
+      {:dogma, only: [:dev, :test]},
     ]
   end
 end
