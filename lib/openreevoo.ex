@@ -1,6 +1,3 @@
-import Mix.Dep.Lock
-import Mix.Project
-
 defmodule Openreevoo do
   @moduledoc """
   Elixir client for writing reviews of elixir libraries.
@@ -24,7 +21,7 @@ defmodule Openreevoo do
 
   def deps do
     Mix.Dep.Lock.read
-    |> Enum.map(fn {k,_} -> to_string k end)
+    |> Enum.map(fn {k,_} -> to_string(k) <> "\n" end)
     |> Enum.join
     |> IO.puts
   end
