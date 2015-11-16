@@ -4,7 +4,7 @@ defmodule Openreevoo do
   """
 
   def main(args) do
-    args |> directory |> in_directory(&deps/0)
+    args |> directory |> File.cd!(&deps/0)
   end
 
   def directory([]) do
@@ -13,10 +13,6 @@ defmodule Openreevoo do
 
   def directory(args) do
     hd(args)
-  end
-
-  def in_directory(dir, fun) do
-    File.cd! dir, fun
   end
 
   def deps do
