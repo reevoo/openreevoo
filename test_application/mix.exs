@@ -1,11 +1,10 @@
-defmodule Openreevoo.Mixfile do
+defmodule TestApplication.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :openreevoo,
+    [app: :test_application,
      version: "0.0.1",
      elixir: "~> 1.0",
-     escript: [main_module: Openreevoo],
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
@@ -15,7 +14,7 @@ defmodule Openreevoo.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger, :mix]]
+    [applications: [:logger]]
   end
 
   # Dependencies can be Hex packages:
@@ -29,10 +28,7 @@ defmodule Openreevoo.Mixfile do
   # Type `mix help deps` for more examples and options
   defp deps do
     [
-      # Automatic test runner
-      {:mix_test_watch, only: :dev},
-      # Code style linter
-      {:dogma, only: [:dev, :test]},
+      {:plug, ">= 0.4.0"}
     ]
   end
 end
