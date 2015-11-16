@@ -17,10 +17,15 @@ Run the executable:
 ```
 
 
-## Tests
-
-Run tests with
+## Development
 
 ```sh
+# Run the tests
 mix test
+
+# Run the tests automatically on file changes
+mix test.watch
+
+# Check code style
+mix dogma
 ```
