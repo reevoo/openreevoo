@@ -15,7 +15,7 @@ defmodule Openreevoo.Dependencies do
   defp format(deps) do
     deps
     |> Enum.with_index
-    |> Enum.map(fn {library, index} -> "#{to_string(index)}: #{library}\n" end)
+    |> Enum.map(fn {library, index} -> "#{index}: #{library}\n" end)
     |> Enum.join
   end
 end
