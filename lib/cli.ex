@@ -6,7 +6,7 @@ defmodule Openreevoo.Cli do
   alias Openreevoo.Review
 
   def run do
-    choose_library |> get_review |> format_review |> IO.puts
+    choose_library |> get_review |> format_review
   end
 
   defp choose_library do

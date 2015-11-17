@@ -5,7 +5,7 @@ defmodule Openreevoo do
   """
 
   def main(args) do
-    args |> directory |> File.cd!(&Openreevoo.Cli.run/0)
+    args |> directory |> File.cd!(&Openreevoo.Cli.run/0) |> IO.puts
   end
 
   def directory([]) do
