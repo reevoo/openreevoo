@@ -3,6 +3,8 @@ defmodule Openreevoo.Cli do
   The command line interface that users leave their review with
   """
 
+  alias Openreevoo.Review
+
   def run do
     choose_library |> get_review |> format_review |> IO.puts
   end
@@ -15,7 +17,7 @@ defmodule Openreevoo.Cli do
   end
 
   defp get_review(library) do
-    %{
+    %Review{
       rating: rating(library),
       good_points: good_points(library),
       bad_points: bad_points(library)
@@ -23,7 +25,7 @@ defmodule Openreevoo.Cli do
   end
 
   defp format_review(review) do
-    "Rating: #{review[:rating]} Good points: #{review[:good_points]} Bad points: #{review[:bad_points]}"
+    "Rating: #{review.rating} Good points: #{review.good_points} Bad points: #{review.bad_points}"
   end
 
   defp rating(library) do
